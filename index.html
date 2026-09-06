@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#eaa5c9" />
+    <title>Petal Post! — One Button Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="desktop" aria-label="Petal Post game window">
+      <header class="titlebar"><span class="dots">● ● ●</span><span>petal_post.exe</span><span class="window-buttons">— □ ×</span></header>
+      <section class="game-shell">
+        <aside class="side-panel" aria-label="Game information">
+          <div class="stamp"><span>✿</span><b>PETAL<br />POST!</b></div>
+          <p class="tiny">A tiny flower courier with one very important button.</p>
+          <div class="status-card">
+            <span>DELIVERIES</span><strong id="score">000</strong>
+            <span>BEST</span><strong id="best">000</strong>
+          </div>
+          <div class="state-led"><span id="led"></span><span id="state">READY</span></div>
+        </aside>
+        <section class="play-area">
+          <canvas id="game" width="720" height="480" aria-label="Petal Post game canvas"></canvas>
+          <div class="hud"><span id="day">DAY 01</span><span id="message">CLICK BLOOM TO START</span></div>
+          <div id="overlay" class="overlay">
+            <div class="overlay-card">
+              <div class="mini-flower">✿</div>
+              <h1>PETAL POST!</h1>
+              <p>Deliver letters through the garden windows.</p>
+              <p class="instruction">PRESS = petal puff<br />HOLD = soft float<br />RELEASE = gentle fall</p>
+              <button id="start" class="start-button">START DELIVERY</button>
+            </div>
+          </div>
+        </section>
+      </section>
+      <footer class="control-deck">
+        <div class="legend"><span class="key">SPACE</span> or click the button</div>
+        <button id="bloom" class="bloom" aria-label="Bloom button">BLOOM<span>✿</span></button>
+        <div class="control-status" id="control-status">RELEASED</div>
+      </footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
