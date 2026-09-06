@@ -1,1 +1,48 @@
-<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Petal Press!</title><link rel="stylesheet" href="style.css"></head><body><main class="desktop"><header class="titlebar">● ● ● <span>petal_press.exe</span><span>— □ ×</span></header><section class="game-shell"><aside class="side-panel"><div class="stamp">✿ <b>PETAL<br>PRESS!</b></div><p class="tiny">A tiny flower mailroom with one important button.</p><div class="status-card"><span>DELIVERED</span><strong id="score">000</strong><span>SHIFT</span><strong id="shift">01</strong><span>BEST</span><strong id="best">000</strong></div><div class="state-led"><span id="led"></span><span id="state">READY</span></div></aside><section class="play-area"><canvas id="game" width="720" height="480"></canvas><div class="hud"><span id="level">LILY LANE</span><span id="message">OPEN THE MAILROOM</span></div><div id="route" class="route-card">TODAY: 3 PETAL POSTCARDS</div><div id="overlay" class="overlay"><div class="overlay-card"><div class="mini-flower">✿</div><h1>PETAL PRESS!</h1><p>A cozy mailroom shift with tiny stories.</p><p class="instruction">TAP = sort a postcard<br>HOLD + RELEASE = press its wax seal<br>PRESS + RELEASE = send it on the train</p><div id="level-map" class="level-map"></div><button id="start" class="start-button">START SHIFT 1</button></div></div></section></section><footer class="control-deck"><div><span class="key">SPACE</span> or click</div><button id="bloom" class="bloom">BLOOM PRESS ✿</button><div id="control-status" class="control-status">RELEASED</div></footer></main><script src="game.js?v=9"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#eaa5c9" />
+    <title>Petal Press! — One Button Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="desktop" aria-label="Petal Press game window">
+      <header class="titlebar"><span class="dots">● ● ●</span><span>petal_press.exe</span><span class="window-buttons">— □ ×</span></header>
+      <section class="game-shell">
+        <aside class="side-panel" aria-label="Game information">
+          <div class="stamp"><span>✿</span><b>PETAL<br />PRESS!</b></div>
+          <p class="tiny">A tiny flower mailroom with one very important button.</p>
+          <div class="status-card">
+            <span>SEALED</span><strong id="score">000</strong>
+            <span>BOUQUET</span><strong id="combo">×0</strong>
+            <span>BEST</span><strong id="best">000</strong>
+          </div>
+          <div class="state-led"><span id="led"></span><span id="state">READY</span></div>
+        </aside>
+        <section class="play-area">
+          <canvas id="game" width="720" height="480" aria-label="Petal Press game canvas"></canvas>
+          <div class="hud"><span id="day">BATCH 01</span><span id="message">CLICK BLOOM TO START</span></div>
+          <div id="route" class="route-card">TODAY'S ROUTE: LILY LANE</div>
+          <div id="overlay" class="overlay">
+            <div class="overlay-card">
+              <div class="mini-flower">✿</div>
+              <h1>PETAL PRESS!</h1>
+              <p>Run a tiny garden mailroom shift.</p>
+              <p class="instruction">SEAL = hold + release<br />EXPRESS = tap once<br />RIBBON = tap twice</p>
+              <div id="level-map" class="level-map" aria-label="Level map"></div>
+              <button id="start" class="start-button">START LEVEL 1</button>
+            </div>
+          </div>
+        </section>
+      </section>
+      <footer class="control-deck">
+        <div class="legend"><span class="key">SPACE</span> or click the button</div>
+        <button id="bloom" class="bloom" aria-label="Bloom press button">BLOOM PRESS<span>✿</span></button>
+        <div class="control-status" id="control-status">RELEASED</div>
+      </footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
