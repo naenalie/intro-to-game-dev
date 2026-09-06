@@ -1,50 +1,50 @@
-# Petal Post! ✿
+# Petal Press! ✿
 
 Play the published game at: **https://naenalie.github.io/intro-to-game-dev/** (available after GitHub Pages finishes deploying).
 
 ## Game Design Document
 
 ### Game title
-**Petal Post!**
+**Petal Press!**
 
 ### Game genre
-One-button arcade / endless score-chaser.
+One-button mailroom rhythm / timing game.
 
 ### Core features
 
 | Feature | What it does | Why it matters |
 | --- | --- | --- |
-| One stationary Bloom button | The on-screen `BLOOM` button stays at the bottom centre. It also maps to the single physical **Space** key. | Meets the One Button Challenge and keeps the game instantly understandable. |
-| Three input states | **Pressed** gives the courier a petal puff upward; **Held** slows its fall into a soft float; **Released** returns it to a gentle fall. | Makes one button expressive instead of just being a tap control. The visible status light teaches each state. |
-| Letter-garden route | Steer a tiny envelope courier through changing gaps between flower hedges. | Gives the player a rhythmic, readable survival challenge. |
-| Pixel desktop presentation | A faux retro application window, pastel stripes, pixel clouds, flower hedges, and synthesized button sounds. | Uses the supplied pastel retro/pixel references while remaining original and lightweight. |
+| One stationary Bloom Press button | The on-screen `BLOOM PRESS` button stays at the bottom centre. It also maps to the single physical **Space** key. | Meets the One Button Challenge and keeps the game instantly understandable. |
+| Three input states | **Pressed** starts a wax seal; **Held** fills its timing meter; **Released** sends the letter. | Makes one button expressive through rhythm and timing rather than movement. The visible status light teaches each state. |
+| Garden letterpress | Envelopes travel along a mailroom conveyor to a flower-powered press. | Creates a fresh, non-flight gameplay loop with a clear, tactile goal. |
+| Pixel desktop presentation | A faux retro application window, pastel stripes, pixel clouds, a cozy mailroom, and synthesized button sounds. | Uses the supplied pastel retro/pixel references while remaining original and lightweight. |
 | High score | Deliveries and best score are displayed; best score persists locally. | Encourages replay without requiring an account or server. |
 
 ### Game mechanics
 
-Start with the single stationary **START DELIVERY** button, then use only the fixed **BLOOM** button (or the one keyboard key, **Space**):
+Start with the single stationary **OPEN MAILROOM** button, then use only the fixed **BLOOM PRESS** button (or the one keyboard key, **Space**):
 
-- **Pressed:** each fresh press gives one upward puff.
-- **Held:** holding reduces gravity, creating a controlled float.
-- **Released:** the courier falls normally.
-- Pass through a hedge opening to deliver a letter and earn one point. Touch a hedge, the ceiling, or the ground to end the delivery.
+- **Pressed:** start applying wax when a letter reaches the press.
+- **Held:** keep pressing to fill the pink meter toward the little green target bar.
+- **Released:** release while the meter is within the target tolerance to send a perfectly sealed letter.
+- A letter that passes the press or is released too early/late costs one of three lives.
 
 Mouse/touch movement, gestures, a control pad, voice input, and accelerometer input are not used.
 
 ### Game balance — levels of difficulty
 
-The first route has wide, friendly openings and a slow scroll speed. Every delivery makes the garden scroll a little faster and narrows future openings (down to a safe minimum). This creates a smooth difficulty ramp rather than separate hard jumps.
+The first batch moves slowly, and its green target bars are generous. Every perfect seal makes the conveyor a little faster and introduces more varied target lengths. The ramp rewards learning the press rhythm instead of fast reactions alone.
 
 ### Victory conditions
 
-1. **Win / goal:** This is an endless game: the goal is to make the highest possible number of deliveries and beat the saved best score.
-2. **Lose:** The delivery ends when the envelope courier hits a hedge, the top edge, or the garden floor.
+1. **Win / goal:** This is an endless game: seal as many letters as possible and beat the saved best score.
+2. **Lose:** The mailroom closes after three missed or badly sealed letters.
 
 ## Prototype, assets, and testing
 
 - The project is a playable browser prototype with all visual assets drawn in code, so it has no copyright or download dependency.
 - Audio is synthesized in the browser after the first user interaction; it requires no audio files.
-- Suggested user-test script: ask 3 players to play once without explanation, then ask (a) whether they notice pressed/held/released, (b) if the first gap feels fair, and (c) their score. Record feedback and adjust `gap`, `speed`, and gravity values in `game.js`.
+- Suggested user-test script: ask 3 players to play once without explanation, then ask (a) whether they notice pressed/held/released, (b) if the first seal target feels fair, and (c) their score. Record feedback and adjust `target`, `speed`, and seal fill values in `game.js`.
 
 ## Run locally
 
