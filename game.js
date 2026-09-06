@@ -9,7 +9,7 @@ const LEVELS=[
 ];
 const ORDER={express:{name:'EXPRESS',icon:'⚡',color:'#f5cf65',hint:'TAP ONCE'},wax:{name:'WAX SEAL',icon:'✿',color:'#f8c4d6',hint:'HOLD → RELEASE'},ribbon:{name:'RIBBON',icon:'♧',color:'#cbb6e7',hint:'TAP TWICE'}};
 let best=+localStorage.getItem('petal-post-best')||0,unlocked=Math.min(5,+localStorage.getItem('petal-press-unlocked')||1),selected=1;
-let playing=false,down=false,last=0,levelScore=0,totalScore=0,combo=0,bouquets=0,lives=3,parcel=null,spawnTimer=0,hold=0,tapTimer=0,audio,musicNodes=[],musicTimer,particles=[],popups=[],machineKick=0,shake=0;
+let playing=false,down=false,last=0,frame=0,levelScore=0,totalScore=0,combo=0,bouquets=0,lives=3,parcel=null,spawnTimer=0,hold=0,tapTimer=0,audio,musicNodes=[],musicTimer,particles=[],popups=[],machineKick=0,shake=0;
 ui.best.textContent=String(best).padStart(3,'0');
 function tone(f,d=.08,type='triangle',v=.05,delay=0){if(!audio)return;const o=audio.createOscillator(),g=audio.createGain(),t=audio.currentTime+delay;o.type=type;o.frequency.setValueAtTime(f,t);g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(.001,t+d);o.connect(g).connect(audio.destination);o.start(t);o.stop(t+d)}
 function sfx(kind){if(kind==='press'){tone(300,.05,'square',.05);tone(480,.09,'triangle',.035,.03)}if(kind==='wax')tone(210,.12,'sine',.035);if(kind==='good'){tone(680,.12,'triangle',.07);tone(970,.28,'sine',.045,.1)}if(kind==='perfect'){tone(880,.13,'triangle',.075);tone(1320,.35,'sine',.05,.1)}if(kind==='bad')tone(140,.2,'sawtooth',.055);if(kind==='level'){tone(523,.14,'triangle',.07);tone(784,.18,'triangle',.06,.1);tone(1046,.38,'sine',.05,.2)}}
