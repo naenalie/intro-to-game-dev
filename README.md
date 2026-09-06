@@ -17,6 +17,7 @@ One-button mailroom rhythm / timing game.
 | One stationary Bloom Press button | The on-screen `BLOOM PRESS` button stays at the bottom centre. It also maps to the single physical **Space** key. | Meets the One Button Challenge and keeps the game instantly understandable. |
 | Three input states | **Pressed** starts a wax seal; **Held** fills its timing meter; **Released** sends the letter. | Makes one button expressive through rhythm and timing rather than movement. The visible status light teaches each state. |
 | Garden letterpress | Envelopes travel along a mailroom conveyor to a flower-powered press. | Creates a fresh, non-flight gameplay loop with a clear, tactile goal. |
+| Bouquet combo & golden mail | Three consecutive perfect seals unlock a golden letter worth two points. Each letter also reveals a new garden destination. | Gives a short, satisfying story-like progression and rewards consistent timing. |
 | Pixel desktop presentation | A faux retro application window, pastel stripes, pixel clouds, a cozy mailroom, and synthesized button sounds. | Uses the supplied pastel retro/pixel references while remaining original and lightweight. |
 | High score | Deliveries and best score are displayed; best score persists locally. | Encourages replay without requiring an account or server. |
 
@@ -28,6 +29,7 @@ Start with the single stationary **OPEN MAILROOM** button, then use only the fix
 - **Held:** keep pressing to fill the pink meter toward the little green target bar.
 - **Released:** release while the meter is within the target tolerance to send a perfectly sealed letter.
 - A letter that passes the press or is released too early/late costs one of three lives.
+- Make three perfect seals in a row to receive a **golden letter** worth two points.
 
 Mouse/touch movement, gestures, a control pad, voice input, and accelerometer input are not used.
 
@@ -43,7 +45,7 @@ The first batch moves slowly, and its green target bars are generous. Every perf
 ## Prototype, assets, and testing
 
 - The project is a playable browser prototype with all visual assets drawn in code, so it has no copyright or download dependency.
-- Audio is synthesized in the browser after the first user interaction; it requires no audio files.
+- Audio is synthesized in the browser after the first user interaction: a soft looping music-box ambience, button press and wax-fill ticks, plus distinct perfect-seal and error sounds. It requires no audio files.
 - Suggested user-test script: ask 3 players to play once without explanation, then ask (a) whether they notice pressed/held/released, (b) if the first seal target feels fair, and (c) their score. Record feedback and adjust `target`, `speed`, and seal fill values in `game.js`.
 
 ## Run locally
