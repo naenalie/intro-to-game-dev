@@ -4,45 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#eaa5c9" />
-    <title>Petal Press! — One Button Game</title>
+    <title>Bloomline Journey — One Button Game</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="desktop" aria-label="Petal Press game window">
-      <header class="titlebar"><span class="dots">● ● ●</span><span>petal_press.exe</span><span class="window-buttons">— □ ×</span></header>
+      <header class="titlebar"><span class="dots">● ● ●</span><span>bloomline.exe</span><span class="window-buttons">— □ ×</span></header>
       <section class="game-shell">
         <aside class="side-panel" aria-label="Game information">
-          <div class="stamp"><span>✿</span><b>PETAL<br />PRESS!</b></div>
-          <p class="tiny">A tiny flower mailroom with one very important button.</p>
+          <div class="stamp"><span>✿</span><b>BLOOMLINE<br />JOURNEY</b></div>
+          <p class="tiny">A tiny garden journey with one important button.</p>
           <div class="status-card">
-            <span>SEALED</span><strong id="score">000</strong>
-            <span>BOUQUET</span><strong id="combo">×0</strong>
+            <span>SPARKS</span><strong id="score">000</strong>
+            <span>MOMENT</span><strong id="combo">×0</strong>
             <span>BEST</span><strong id="best">000</strong>
           </div>
           <div class="state-led"><span id="led"></span><span id="state">READY</span></div>
         </aside>
         <section class="play-area">
-          <canvas id="game" width="720" height="480" aria-label="Petal Press game canvas"></canvas>
+          <canvas id="game" width="720" height="480" aria-label="Bloomline Journey game canvas"></canvas>
           <div class="hud"><span id="day">BATCH 01</span><span id="message">CLICK BLOOM TO START</span></div>
           <div id="route" class="route-card">TODAY'S ROUTE: LILY LANE</div>
           <div id="overlay" class="overlay">
             <div class="overlay-card">
               <div class="mini-flower">✿</div>
-              <h1>PETAL PRESS!</h1>
-              <p>Build each postcard through three tiny stations.</p>
-              <p class="instruction">MATCH = press on the right stamp<br />WAX = hold + release on green<br />SEND = release on the platform</p>
+              <h1>BLOOMLINE!</h1>
+              <p>Take a tiny night journey through five garden routes.</p>
+              <p class="instruction">TAP = light a path<br />HOLD + RELEASE = grow a bridge<br />PRESS + RELEASE = guide a lantern</p>
               <div id="level-map" class="level-map" aria-label="Level map"></div>
-              <button id="start" class="start-button">START LEVEL 1</button>
+              <button id="start" class="start-button">BEGIN LEVEL 1</button>
             </div>
           </div>
         </section>
       </section>
       <footer class="control-deck">
         <div class="legend"><span class="key">SPACE</span> or click the button</div>
-        <button id="bloom" class="bloom" aria-label="Bloom press button">BLOOM PRESS<span>✿</span></button>
+        <button id="bloom" class="bloom" aria-label="Bloom button">BLOOM<span>✿</span></button>
         <div class="control-status" id="control-status">RELEASED</div>
       </footer>
     </main>
-    <script src="game.js?v=6"></script>
+    <script src="game.js?v=7"></script>
   </body>
 </html>
